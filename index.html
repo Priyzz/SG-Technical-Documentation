@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Link Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Proza+Libre:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Soccer Guru 1.0.1</header>
+      <a href="#Arena" class="nav-link">Arena</a>
+      <a href="#Winner_of_the_match" class="nav-link">Winner of the match</a>
+      <a href="#Positional_chemistry" class="nav-link">Positional chemistry</a>
+      <a href="#Not_supported_formations" class="nav-link">Not supported formations</a>
+      <a href="#Friendly" class="nav-link">Friendly</a>
+      <a href="#Tips_from_the_dev" class="nav-link">Tips from the dev</a>
+      <a href="#Other_things_to_note" class="nav-link">Other things to note</a>
+    </nav>
+    <main id="main-doc">
+      <section id="Arena" class="main-section">
+        <header>Arena</header>
+        <p>Arena is the new competitive game mode added to the bot, build a team and fight against other players in discord-land to get better daily rewards for building your teams.</p>
+        <p>
+          Every day you will be allowed 5 matches to climb up the rankings with, each match can take up to 1 minute to finish. At the end of the day (17:00 UTC) you will be rewarded with a number of credits up to 5000 for 1st place
+          depending on your final position at that time. This command has a 1 hour cooldown so you will need to spread out your battles throughout the day. Each battle itself has a small credit reward – 400 credits for the winner and 200
+          credits for the loser. Win your game and switch rankings with your opponent, lose and you both remain in the same position.
+        </p>
+        <p>*Note* - If someone else is playing against your team, you cannot play until that game finishes</p>
+        <code></code>
+        <code></code>
+        <code></code>
+        <code></code>
+        <code></code>
+      </section>
+      <section id="Winner_of_the_match" class="main-section">
+        <header>Winner of the match</header>
+        <p>The winner of each match is determined as follows:</p>
+        <ol>
+          <li>
+            <span>Chemistry =</span> Soccer Guru has its own chemistry system, similar to FIFA but with a few twists, A teams chemistry is initially broken down into 3 section: Defence, Midfield & Attack. Each of these sections are given a
+            rating based on if the players are being played in the correct position (most heavily weighted) weather they share the same nationality as their fellow defenders and if they share the same club. These factors averaged give an
+            overall chemistry rating for each part of the team and combine to give a team chemistry.
+          </li>
+          <li>
+            <span>Super Effective/Not Very Effective =</span> The total stats of the players after they have been modified by chemistry are then compared to your chosen opponents stats. With the following bonuses then being applied:
+            <ul>
+              <li><span>Pace</span> – Strong vs Defending, Weak vs Passing</li>
+              <li><span>Shooting</span> – Strong vs Dribbling, Weak vs Physicality</li>
+              <li><span>Passing</span> – Strong vs Pace, Weak vs Shooting</li>
+              <li><span>Dribbling</span> – Strong vs Passing, Weak vs Defending</li>
+              <li><span>Defending</span> – Strong vs Physicality, Weak vs Dribbling</li>
+              <li><span>Physicality</span> - Strong vs Shooting, Weak vs Pace</li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          After all this each player has an effective ELO rating. This represents a calculated number of how good your team is on an average day. Each team is randomed a number in their ELO range and the team with the higher ELO after this
+          point will be the winner of the match
+        </p>
+      </section>
+      <section id="Positional_chemistry" class="main-section">
+        <header>Positional chemistry</header>
+        <p>
+          <span>Central Midfielders:</span> CDM, CM and CAM are all recognised as central midifielders – therefore any combination of those as long as you have the correct amount (2 in a midfield 4 and 3 in a midfield 5 and so on) you will
+          not be penalised for which of the central midfield positions you use.
+        </p>
+        <p><span>Attackers:</span> CF and ST are considered the same as above.</p>
+        <p>*Note* - The above does not apply to RM/RW or RWB/RB concepts, therefore if you have 5 defenders you must use a RWB and LWB in order to achieve perfect positional chemistry (not a RB & LB).</p>
+      </section>
+      <section id="Not_supported_formations" class="main-section">
+        <header>Not supported formations</header>
+        <p>
+          Currently not supported formations are those with 4 or more central midfielders (I.e. 4-2-3- 1 Narrow formation and 4-2-2-2). This was an oversight from me and will be corrected in the future, in the meantime I suggest if you wish
+          to use 4/5 midfielders you should include a LM and a RM in your team.
+        </p>
+      </section>
+      <section id="Friendly" class="main-section">
+        <header>Friendly</header>
+        <p>
+          Friendlies have been introduced for users to be able to quickly simulate matches between their friends maybe for the more casual player who is not interested in climbing arena rankings or for practice against fellow competitors,
+          maybe you can even make mini-leagues within your servers.
+        </p>
+        <p>
+          This command works very similarly to the Arena, match results are calculated in the same way. This command does not give rewards for each match but has no daily limit other than a 15 minute cooldown. This allows you to battle
+          friends or try out practice matches to your hearts contempt before entering the arena.
+        </p>
+      </section>
+      <section id="Tips_from_the_dev" class="main-section">
+        <header>Tips from the dev</header>
+        <ul>
+          <li>
+            Don’t get overly concerned about chemistry – the system is designed to allow for a mix of players to be eligible and perfect chemistry will almost never be achieved with a really high rated squad – just have fun with it and see
+            what does and doesn’t work for you.
+          </li>
+          <li>Players skill number now have a meaning, search for players with good stats rather than just a high overall rating (e.g. Thomas Muller would be a poor choice as he has a high overall rating but doesn’t excel in any stat).</li>
+          <li>High rated players will still put you at a very good basis for a team, look for good players first then think about chemistry afterwards – see if you can beat the system.</li>
+          <li>
+            Recommendations – This is really up to you but my design intention at the start was that an idea that you could build like an Icon Defence, German Midfield and a PSG frontline and it would still work well, I have tried to leave
+            as much space for creativity as possible
+          </li>
+        </ul>
+      </section>
+      <section id="Other_things_to_note" class="main-section">
+        <header>Other things to note</header>
+        <ul>
+          <li>Icons do not work as they do in FIFA, icons have chemistry with other icons and players of the same nationality but they do not have chemistry with others</li>
+          <li>
+            UCL/UEL live cards will not update in the future as they do in FIFA, the card you get now will be the same, if this players card improves on FIFA a new version may appear in the bot but your card will not change. This is
+            something I am looking to improve upon for next season but for now they will not update as the player progresses through the tournament
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
